@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace CyrilVerloop\Codingame\Tests\Generator;
 
 use CyrilVerloop\Codingame\Generator\CGTestGenerator;
+use CyrilVerloop\Codingame\Generator\FileGenerator;
 use CyrilVerloop\Codingame\Generator\TestConfiguration;
 use CyrilVerloop\Codingame\Generator\TestConfigurations;
 use CyrilVerloop\Codingame\Generator\TestGeneratorConfiguration;
@@ -17,6 +18,7 @@ use PHPUnit\Framework\TestCase;
  */
 #[
     PA\CoversClass(CGTestGenerator::class),
+    PA\UsesClass(FileGenerator::class),
     PA\UsesClass(TestGeneratorConfiguration::class),
     PA\UsesClass(TestConfiguration::class),
     PA\UsesClass(TestConfigurations::class),

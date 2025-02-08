@@ -6,6 +6,7 @@ namespace CyrilVerloop\Codingame\Tests\Generator;
 
 use CyrilVerloop\Codingame\Generator\CGCodeGenerator;
 use CyrilVerloop\Codingame\Generator\CodeGeneratorConfiguration;
+use CyrilVerloop\Codingame\Generator\FileGenerator;
 use org\bovigo\vfs\vfsStream;
 use PHPUnit\Framework\Attributes as PA;
 use PHPUnit\Framework\TestCase;
@@ -16,6 +17,7 @@ use PHPUnit\Framework\TestCase;
 #[
     PA\CoversClass(CGCodeGenerator::class),
     PA\UsesClass(CodeGeneratorConfiguration::class),
+    PA\UsesClass(FileGenerator::class),
     PA\Group('cgpt'),
     PA\Group('cgpt_generator'),
     PA\Group('cgpt_generator_CGCodeGenerator')

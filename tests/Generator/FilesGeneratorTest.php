@@ -9,6 +9,7 @@ use CyrilVerloop\Codingame\Configuration\TestConfiguration;
 use CyrilVerloop\Codingame\Configuration\TestConfigurations;
 use CyrilVerloop\Codingame\Generator\CGCodeGenerator;
 use CyrilVerloop\Codingame\Generator\CGTestGenerator;
+use CyrilVerloop\Codingame\Generator\FileGenerator;
 use CyrilVerloop\Codingame\Generator\FilesGenerator;
 use CyrilVerloop\Codingame\Generator\CodeGeneratorConfiguration;
 use CyrilVerloop\Codingame\Generator\TestConfiguration as TCGenerator;
@@ -30,6 +31,7 @@ use PHPUnit\Framework\TestCase;
     PA\UsesClass(CodeGeneratorConfiguration::class),
     PA\UsesClass(ConfigurationConvertor::class),
     PA\UsesClass(ConfigurationParser::class),
+    PA\UsesClass(FileGenerator::class),
     PA\UsesClass(ParsedConfiguration::class),
     PA\UsesClass(TCGenerator::class),
     PA\UsesClass(TCsGenerator::class),
