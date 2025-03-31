@@ -10,7 +10,7 @@
             "file": "01 - test file.txt"
         },
         {
-            "name": "test name 2",
+            "name": "test name with */",
             "alphanumName": "testAlphanumName2",
             "file": "02 - test file 2.txt"
         }

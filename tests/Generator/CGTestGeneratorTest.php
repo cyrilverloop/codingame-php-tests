@@ -66,7 +66,7 @@ final class CGTestGeneratorTest extends TestCase
             '01 - test file.txt'
         );
         $TestConfiguration2 = new TestConfiguration(
-            'Test name 2',
+            'Test name with */',
             'testGroup2',
             'TestMethod2',
             '02 - test file 2.txt'

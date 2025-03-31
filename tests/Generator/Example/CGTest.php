@@ -40,11 +40,11 @@ final class CGTest extends CGTestCase
     }
 
     /**
-     * Tests the code with "Test name 2".
+     * Tests the code with "Test name with * /".
      */
     #[
         PA\Group('anAlphanumName_testGroup2'),
-        PA\TestDox('Test name 2')
+        PA\TestDox('Test name with */')
     ]
     public function testTestMethod2(): void
     {

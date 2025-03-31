@@ -26,7 +26,7 @@ final class CGTest extends CGTestCase
 {% for test in configuration.testConfigurations %}
 
     /**
-     * Tests the code with "{{ test.name|raw }}".
+     * Tests the code with "{{ test.name|replace({'*/': '* /'})|raw }}".
      */
     #[
         PA\Group('{{ configuration.group }}_{{ test.group }}'),
