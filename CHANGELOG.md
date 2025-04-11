@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Fixed
+- code and test files generation when the configuration has no PHP code.
+
 ## [6.4.1] - 2025-03-31
 ### Changed
 - cyril-verloop/codingame-configuration 1.13.0 => 1.13.1.

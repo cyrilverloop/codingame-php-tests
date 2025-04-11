@@ -60,6 +60,10 @@ final class FilesGeneratorTest extends TestCase
         $configContent = file_get_contents(__DIR__ . '/Example/config.json');
 
         return [
+            'templates' => [
+                'CGCode.twig' => file_get_contents(__DIR__ . '/../../templates/CGCode.twig'),
+                'CGTest.twig' => file_get_contents(__DIR__ . '/../../templates/CGTest.twig')
+            ],
             'vendor' => [
                 'cyril-verloop' => [
                     'codingame-configuration' => [
@@ -121,7 +125,7 @@ final class FilesGeneratorTest extends TestCase
         ];
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -149,7 +153,7 @@ final class FilesGeneratorTest extends TestCase
         $fileStructure = $this->getFileStructure();
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -187,7 +191,7 @@ final class FilesGeneratorTest extends TestCase
         ];
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -215,7 +219,7 @@ final class FilesGeneratorTest extends TestCase
         $fileStructure = $this->getFileStructure();
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -252,7 +256,7 @@ final class FilesGeneratorTest extends TestCase
         ];
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -274,7 +278,7 @@ final class FilesGeneratorTest extends TestCase
         $fileStructure = $this->getFileStructure();
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -321,7 +325,7 @@ final class FilesGeneratorTest extends TestCase
         ];
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -343,7 +347,7 @@ final class FilesGeneratorTest extends TestCase
         $fileStructure = $this->getFileStructure();
         vfsStream::setup(structure: $fileStructure);
 
-        $filesGenerator = new FilesGenerator(__DIR__ . '/../../templates/');
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
         $filesGenerator->generate(
             vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
             vfsStream::url('root/src/'),
@@ -369,5 +373,26 @@ final class FilesGeneratorTest extends TestCase
             vfsStream::url('root/tests/Easy/APuzzle2/output/02 - test file 2.txt'),
             'The output file "02 - test file 2.txt" for APuzzle2 has not been copied.'
         );
+    }
+
+    /**
+     * Tests that no file will be generated
+     * if there is no PHP source file.
+     */
+    public function testCanSkipConfigurationWhenThereIsNoGCCodePHPFile(): void
+    {
+        $fileStructure = $this->getFileStructure();
+        unset($fileStructure['vendor']['cyril-verloop']['codingame-configuration']['config']['easy']['APuzzle']['code']);
+        vfsStream::setup(structure: $fileStructure);
+
+        $filesGenerator = new FilesGenerator(vfsStream::url('root/'));
+        $filesGenerator->generate(
+            vfsStream::url('root/vendor/cyril-verloop/codingame-configuration/config/'),
+            vfsStream::url('root/src/'),
+            vfsStream::url('root/tests/')
+        );
+
+        self::assertDirectoryDoesNotExist(vfsStream::url('root/src/Easy/APuzzle/'));
+        self::assertDirectoryDoesNotExist(vfsStream::url('root/tests/Easy/APuzzle/'));
     }
 }

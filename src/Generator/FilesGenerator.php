@@ -27,12 +27,32 @@ final class FilesGenerator
     private const string CODE_DIRECTORY = 'code' . DIRECTORY_SEPARATOR;
 
     /**
+     * The source directory.
+     */
+    private const string SOURCE_DIRECTORY = 'src' . DIRECTORY_SEPARATOR;
+
+    /**
+     * The template directory.
+     */
+    private const string TEMPLATE_DIRECTORY = 'templates' . DIRECTORY_SEPARATOR;
+
+    /**
+     * The tests directory.
+     */
+    private const string TESTS_DIRECTORY = 'tests' . DIRECTORY_SEPARATOR;
+
+    /**
      * The default code file.
      */
     private const string DEFAULT_CODE_FILE = 'CGCode.php';
 
 
     // Properties :
+
+    /**
+     * @var string the project path.
+     */
+    private string $projectPath;
 
     /**
      * @var \CyrilVerloop\Codingame\Parser\ConfigurationParser the configuration parser.
@@ -54,11 +74,13 @@ final class FilesGenerator
 
     /**
      * The constructor.
-     * @param string $templatesPath the templates path.
+     * @param string $projectPath the project path.
      */
-    public function __construct(string $templatesPath)
+    public function __construct(string $projectPath)
     {
+        $this->projectPath = $projectPath;
         $this->configurationParser = new ConfigurationParser();
+        $templatesPath = $projectPath . self::TEMPLATE_DIRECTORY;
         $this->codeGenerator = new CGCodeGenerator($templatesPath);
         $this->testGenerator = new CGTestGenerator($templatesPath);
     }
@@ -68,15 +90,9 @@ final class FilesGenerator
 
     /**
      * Generates the test files.
-     * @param string $pathToScan the path to scan for a configuration file.
-     * @param string $srcPath the equivalent path of $pathToScan in the src directory.
-     * @param string $testPath the equivalent path of $pathToScan in the tests directory.
+     * @param string $pathToScan the path to scan for the configuration files.
      */
-    public function generate(
-        string $pathToScan,
-        string $srcPath,
-        string $testPath
-    ): void {
+    public function generate(string $pathToScan): void {
         /**
          * @var string[] $difficulties
          */
@@ -87,14 +103,33 @@ final class FilesGenerator
              * @var string[] $configurations
              */
             $configurations = array_diff(scandir($pathToScan . $difficulty), ['.', '..']);
+            $this->generateConfigurationsForDifficulty(
+                $configurations,
+                $difficulty,
+                $pathToScan . $difficulty . DIRECTORY_SEPARATOR
+            );
+        }
+    }
 
-            foreach ($configurations as $configuration) {
-                $namespacePath = ucfirst($difficulty) . DIRECTORY_SEPARATOR . $configuration . DIRECTORY_SEPARATOR;
+    /**
+     * Generates the configurations for the difficulty.
+     * @param string[] $configurations the configurations.
+     * @param string $difficulty the difficulty.
+     * @param string $difficultyPathToScan the path to scan for a configuration file.
+     */
+    private function generateConfigurationsForDifficulty(
+        array $configurations,
+        string $difficulty,
+        string $difficultyPathToScan
+    ): void {
+        foreach ($configurations as $configuration) {
+            $configurationPath = $difficultyPathToScan . $configuration . DIRECTORY_SEPARATOR;
+            $defaultCodeFile = $configurationPath . self::CODE_DIRECTORY . self::DEFAULT_CODE_FILE;
 
+            if (file_exists($defaultCodeFile) === true) {
                 $this->generateFilesForConfiguration(
-                    $pathToScan . $difficulty . DIRECTORY_SEPARATOR . $configuration . DIRECTORY_SEPARATOR,
-                    $srcPath . $namespacePath,
-                    $testPath . $namespacePath
+                    $configurationPath,
+                    ucfirst($difficulty) . DIRECTORY_SEPARATOR . $configuration . DIRECTORY_SEPARATOR
                 );
             }
         }
@@ -103,13 +138,11 @@ final class FilesGenerator
     /**
      * Generates the files for the configuration.
      * @param string $configurationPath the path of the `config` directory.
-     * @param string $srcPath the path where to generate the code.
-     * @param string $testPath the path where to generate the test.
+     * @param string $namespacePath the path where to generate the files.
      */
     private function generateFilesForConfiguration(
         string $configurationPath,
-        string $srcPath,
-        string $testPath
+        string $namespacePath
     ): void {
         $parsedConfiguration = $this->configurationParser->getConfigurationFromFile($configurationPath . self::CONFIG_FILE);
 
@@ -120,14 +153,14 @@ final class FilesGenerator
 
         $this->codeGenerator->generate(
             $codeConfiguration,
-            $srcPath
+            $this->projectPath . self::SOURCE_DIRECTORY . $namespacePath
         );
 
         $testConfiguration = ConfigurationConvertor::getTestGeneratorConfiguration($parsedConfiguration);
         $this->testGenerator->generate(
             $testConfiguration,
             $configurationPath,
-            $testPath
+            $this->projectPath . self::TESTS_DIRECTORY . $namespacePath
         );
     }
 }
