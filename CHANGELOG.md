@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - code and test files generation when the configuration has no PHP code.
+- copy Psalm on installation instead of linking.
 
 ## [6.4.1] - 2025-03-31
 ### Changed
