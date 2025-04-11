@@ -52,6 +52,13 @@ final class FilesGeneratorTest extends TestCase
      */
     public function getFileStructure(): array
     {
+        $CGCodeContent = file_get_contents(__DIR__ . '/Example/CGCode.dist');
+        $inputFileContent = file_get_contents(__DIR__ . '/Example/input/01 - test file.txt');
+        $inputFile2Content = file_get_contents(__DIR__ . '/Example/input/02 - test file 2.txt');
+        $outputFileContent = file_get_contents(__DIR__ . '/Example/output/01 - test file.txt');
+        $outputFile2Content = file_get_contents(__DIR__ . '/Example/output/02 - test file 2.txt');
+        $configContent = file_get_contents(__DIR__ . '/Example/config.json');
+
         return [
             'vendor' => [
                 'cyril-verloop' => [
@@ -60,31 +67,31 @@ final class FilesGeneratorTest extends TestCase
                             'easy' => [
                                 'APuzzle' => [
                                     'code' => [
-                                        'CGCode.php' => file_get_contents(__DIR__ . '/Example/CGCode.dist')
+                                        'CGCode.php' => $CGCodeContent
                                     ],
                                     'input' => [
-                                        '01 - test file.txt' => file_get_contents(__DIR__ . '/Example/input/01 - test file.txt'),
-                                        '02 - test file 2.txt' => file_get_contents(__DIR__ . '/Example/input/02 - test file 2.txt')
+                                        '01 - test file.txt' => $inputFileContent,
+                                        '02 - test file 2.txt' => $inputFile2Content
                                     ],
                                     'output' => [
-                                        '01 - test file.txt' => file_get_contents(__DIR__ . '/Example/output/01 - test file.txt'),
-                                        '02 - test file 2.txt' => file_get_contents(__DIR__ . '/Example/output/02 - test file 2.txt')
+                                        '01 - test file.txt' => $outputFileContent,
+                                        '02 - test file 2.txt' => $outputFile2Content
                                     ],
-                                    'config.json' => file_get_contents(__DIR__ . '/Example/config.json')
+                                    'config.json' => $configContent
                                 ],
                                 'APuzzle2' => [
                                     'code' => [
-                                        'CGCode.php' => file_get_contents(__DIR__ . '/Example/CGCode.dist')
+                                        'CGCode.php' => $CGCodeContent
                                     ],
                                     'input' => [
-                                        '01 - test file.txt' => file_get_contents(__DIR__ . '/Example/input/01 - test file.txt'),
-                                        '02 - test file 2.txt' => file_get_contents(__DIR__ . '/Example/input/02 - test file 2.txt')
+                                        '01 - test file.txt' => $inputFileContent,
+                                        '02 - test file 2.txt' => $inputFile2Content
                                     ],
                                     'output' => [
-                                        '01 - test file.txt' => file_get_contents(__DIR__ . '/Example/output/01 - test file.txt'),
-                                        '02 - test file 2.txt' => file_get_contents(__DIR__ . '/Example/output/02 - test file 2.txt')
+                                        '01 - test file.txt' => $outputFileContent,
+                                        '02 - test file 2.txt' => $outputFile2Content
                                     ],
-                                    'config.json' => file_get_contents(__DIR__ . '/Example/config.json')
+                                    'config.json' => $configContent
                                 ]
                             ]
                         ]
