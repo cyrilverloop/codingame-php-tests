@@ -92,7 +92,8 @@ final class FilesGenerator
      * Generates the test files.
      * @param string $pathToScan the path to scan for the configuration files.
      */
-    public function generate(string $pathToScan): void {
+    public function generate(string $pathToScan): void
+    {
         /**
          * @var string[] $difficulties
          */
