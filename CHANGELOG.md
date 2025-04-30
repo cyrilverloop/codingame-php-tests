@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- cyril-verloop/codingame-configuration 1.13.1 => 1.13.2.
+- cyril-verloop/codingame-configuration 1.13.1 => 1.14.0.
 
 ### Fixed
 - code and test files generation when the configuration has no PHP code.
