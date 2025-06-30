@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - PHPUnit 12.1.6 => 12.2.0.
+- cyril-verloop/codingame-configuration 1.15.0 => 1.16.0.
 
 ## [6.6.0] - 2025-05-31
 ### Changed
