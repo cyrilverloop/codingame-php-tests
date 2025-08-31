@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - PHPUnit 12.3.0 => 12.3.7.
 - psalm 6.13.0 => 6.13.1.
+- cyril-verloop/codingame-configuration 1.17.1 => 1.18.0.
+- symfony/string v7.3.2 => v7.3.3.
+- symfony/polyfill-* v1.32.0 => v1.33.0.
 
 ## [6.8.1] - 2025-07-31
 ### Changed
