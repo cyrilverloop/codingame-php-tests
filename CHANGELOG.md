@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - phpcs 3.13.2 => 3.13.4.
 - phpcbf 3.13.2 => 3.13.4.
 - symfony/string v7.3.3 => v7.3.4.
+- cyril-verloop/codingame-configuration 1.18.0 => 1.19.0.
 
 ## [6.9.0] - 2025-08-31
 ### Changed
