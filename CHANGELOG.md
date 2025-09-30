@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - PHPUnit 12.3.7 => 12.3.15.
 - phpcs 3.13.2 => 3.13.4.
 - phpcbf 3.13.2 => 3.13.4.
+- symfony/string v7.3.3 => v7.3.4.
 
 ## [6.9.0] - 2025-08-31
 ### Changed
