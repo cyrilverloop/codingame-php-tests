@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - phpunit 12.4.2 => 12.4.4.
 - phpcs 3.13.4 => 3.13.5.
 - phpcbf 3.13.4 => 3.13.5.
+- cyril-verloop/codingame-configuration 1.20.0 => 1.21.0.
 
 ## [6.11.0] - 2025-10-31
 ### Changed

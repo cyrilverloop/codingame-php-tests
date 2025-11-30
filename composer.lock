@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cyril-verloop/codingame-configuration",
-            "version": "1.20.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cyrilverloop/codingame-configuration.git",
-                "reference": "90cb346b2d5c8198c086e163f2ce49e2d94deb5d"
+                "reference": "6b516f33062516b0d35977db9365142a4236419a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cyrilverloop/codingame-configuration/zipball/90cb346b2d5c8198c086e163f2ce49e2d94deb5d",
-                "reference": "90cb346b2d5c8198c086e163f2ce49e2d94deb5d",
+                "url": "https://api.github.com/repos/cyrilverloop/codingame-configuration/zipball/6b516f33062516b0d35977db9365142a4236419a",
+                "reference": "6b516f33062516b0d35977db9365142a4236419a",
                 "shasum": ""
             },
             "type": "library",
@@ -34,7 +34,7 @@
             "description": "A project that contains CodinGame input, output and default code.",
             "support": {
                 "issues": "https://github.com/cyrilverloop/codingame-configuration/issues",
-                "source": "https://github.com/cyrilverloop/codingame-configuration/tree/1.20.0"
+                "source": "https://github.com/cyrilverloop/codingame-configuration/tree/1.21.0"
             },
             "funding": [
                 {
@@ -42,7 +42,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-31T16:01:39+00:00"
+            "time": "2025-11-30T12:25:51+00:00"
         },
         {
             "name": "cyril-verloop/iterator",
