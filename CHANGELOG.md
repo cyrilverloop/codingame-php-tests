@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - symfony/string v7.3.4 => v8.0.0.
 - symfony/translation-contracts v3.6.0 => v3.6.1.
 - twig/string-extra v3.22.0 => v3.22.1.
+- phpunit 12.4.2 => 12.4.4.
+- phpcs 3.13.4 => 3.13.5.
+- phpcbf 3.13.4 => 3.13.5.
 
 ## [6.11.0] - 2025-10-31
 ### Changed
