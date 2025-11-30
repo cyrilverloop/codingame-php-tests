@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- symfony/string v7.3.4 => v8.0.0.
+- symfony/translation-contracts v3.6.0 => v3.6.1.
+- twig/string-extra v3.22.0 => v3.22.1.
+
 ## [6.11.0] - 2025-10-31
 ### Changed
 - removing Xdebug version in Dockerfile.
