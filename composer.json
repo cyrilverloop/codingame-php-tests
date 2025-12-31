@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "8.4.*",
+        "php": "8.5.*",
         "twig/twig": "^3.7",
         "twig/string-extra": "^3.7",
         "cyril-verloop/iterator": "^3.1",
