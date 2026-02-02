@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - symfony/string v8.0.1 => v8.0.4.
 - twig/string-extra v3.22.1 => v3.23.0.
 - twig/twig v3.22.2 => v3.23.0.
+- phpunit 12.5.4 => 12.5.8.
+- psalm 6.14.3 => 6.15.0.
 
 ## [6.13.0] - 2025-12-31
 ### Changed
