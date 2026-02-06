@@ -39,7 +39,7 @@ The `./.ashrc` and `./compose.override.yaml` add some aliases to your container.
 Install the dependencies :
 ```shellsession
 user@host codingame-php-tests$ docker compose run --rm app composer install -o
-user@host codingame-php-tests$ docker compose run --rm app phive install --trust-gpg-keys 4AA394086372C20A,12CE0F1D262429A5,5E6DDE998AB73B8E,C5095986493B4AA0
+user@host codingame-php-tests$ docker compose run --rm app phive install --trust-gpg-keys 4AA394086372C20A,99BF4D9A33D65E1E,5E6DDE998AB73B8E,C5095986493B4AA0
 ```
 
 Generate the code and test files :
