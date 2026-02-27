@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- phpunit 12.5.8 => 13.0.2.
+- phpunit 12.5.8 => 13.0.5.
 - psalm 6.15.0 => 6.15.1.
 
 ## [6.14.0] - 2026-02-02
