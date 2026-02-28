@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - phpunit 12.5.8 => 13.0.5.
 - psalm 6.15.0 => 6.15.1.
 - symfony/string v8.0.4 => v8.0.5.
+- cyril-verloop/codingame-configuration 1.23.0 => 1.24.0.
 
 ## [6.14.0] - 2026-02-02
 ### Changed
