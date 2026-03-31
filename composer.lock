@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "cyril-verloop/codingame-configuration",
-            "version": "1.24.0",
+            "version": "1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cyrilverloop/codingame-configuration.git",
-                "reference": "101f2b26dbae1ab3ffac03caeb7f25ae70ed1c9c"
+                "reference": "6a05d6a1766aec3f86acdd01a18f046d0ba651b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cyrilverloop/codingame-configuration/zipball/101f2b26dbae1ab3ffac03caeb7f25ae70ed1c9c",
-                "reference": "101f2b26dbae1ab3ffac03caeb7f25ae70ed1c9c",
+                "url": "https://api.github.com/repos/cyrilverloop/codingame-configuration/zipball/6a05d6a1766aec3f86acdd01a18f046d0ba651b4",
+                "reference": "6a05d6a1766aec3f86acdd01a18f046d0ba651b4",
                 "shasum": ""
             },
             "type": "library",
@@ -34,7 +34,7 @@
             "description": "A project that contains CodinGame input, output and default code.",
             "support": {
                 "issues": "https://github.com/cyrilverloop/codingame-configuration/issues",
-                "source": "https://github.com/cyrilverloop/codingame-configuration/tree/1.24.0"
+                "source": "https://github.com/cyrilverloop/codingame-configuration/tree/1.25.0"
             },
             "funding": [
                 {
@@ -42,7 +42,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-28T10:33:54+00:00"
+            "time": "2026-03-31T08:32:45+00:00"
         },
         {
             "name": "cyril-verloop/iterator",
@@ -660,7 +660,7 @@
         },
         {
             "name": "twig/string-extra",
-            "version": "v3.23.0",
+            "version": "v3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/string-extra.git",
@@ -711,7 +711,7 @@
                 "unicode"
             ],
             "support": {
-                "source": "https://github.com/twigphp/string-extra/tree/v3.23.0"
+                "source": "https://github.com/twigphp/string-extra/tree/v3.24.0"
             },
             "funding": [
                 {
@@ -727,16 +727,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.23.0",
+            "version": "v3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9"
+                "reference": "a6769aefb305efef849dc25c9fd1653358c148f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
-                "reference": "a64dc5d2cc7d6cafb9347f6cd802d0d06d0351c9",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a6769aefb305efef849dc25c9fd1653358c148f0",
+                "reference": "a6769aefb305efef849dc25c9fd1653358c148f0",
                 "shasum": ""
             },
             "require": {
@@ -746,7 +746,8 @@
                 "symfony/polyfill-mbstring": "^1.3"
             },
             "require-dev": {
-                "phpstan/phpstan": "^2.0",
+                "php-cs-fixer/shim": "^3.0@stable",
+                "phpstan/phpstan": "^2.0@stable",
                 "psr/container": "^1.0|^2.0",
                 "symfony/phpunit-bridge": "^5.4.9|^6.4|^7.0"
             },
@@ -790,7 +791,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.23.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.24.0"
             },
             "funding": [
                 {
@@ -802,7 +803,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-23T21:00:41+00:00"
+            "time": "2026-03-17T21:31:11+00:00"
         }
     ],
     "packages-dev": [
