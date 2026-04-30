@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - phpunit 13.0.6 => 13.1.7.
+- cyril-verloop/codingame-configuration 1.25.0 => 1.26.0.
+- symfony/polyfill-* v1.33.0 => v1.37.0.
+- symfony/string v8.0.6 => v8.0.8.
 
 ## [6.16.0] - 2026-03-31
 ### Changed
