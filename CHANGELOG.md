@@ -14,6 +14,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - symfony/string v8.0.8 => v8.0.13.
 - symfony/translation-contracts v3.6.1 => v3.7.0.
 - twig/twig v3.24.0 => v3.27.0.
+- cyril-verloop/codingame-configuration 1.26.0 => 1.27.0.
+- symfony/string v8.0.13 => v8.1.0.
+- twig/twig v3.27.0 => v3.27.1.
 
 ## [6.17.0] - 2026-04-30
 ### Changed
