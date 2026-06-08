@@ -35,7 +35,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsARuntimeExceptionWhenTheFileDoesNotExist(): void
     {
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('fileNotReadable');
+        $this->expectExceptionMessageIs('fileNotReadable');
 
         $fileSystem = vfsStream::setup('', null, []);
 
@@ -98,7 +98,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfThePathIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('pathNotAString');
+        $this->expectExceptionMessageIs('pathNotAString');
 
         $configuration = $this->getConfiguration();
         $configuration['path'] = 123;
@@ -118,7 +118,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheNameIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('nameNotAString');
+        $this->expectExceptionMessageIs('nameNotAString');
 
         $configuration = $this->getConfiguration();
         $configuration['name'] = 123;
@@ -138,7 +138,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheAlphanumNameIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('alphanumNameNotAString');
+        $this->expectExceptionMessageIs('alphanumNameNotAString');
 
         $configuration = $this->getConfiguration();
         $configuration['alphanumName'] = 123;
@@ -158,7 +158,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheLinkIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('linkNotAString');
+        $this->expectExceptionMessageIs('linkNotAString');
 
         $configuration = $this->getConfiguration();
         $configuration['link'] = 123;
@@ -178,7 +178,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheTestsAreNotAnArray(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('testsNotAnArray');
+        $this->expectExceptionMessageIs('testsNotAnArray');
 
         $configuration = $this->getConfiguration();
         $configuration['tests'] = 123;
@@ -198,7 +198,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheTestNameIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('testNameNotAString');
+        $this->expectExceptionMessageIs('testNameNotAString');
 
         $configuration = $this->getConfiguration();
         $testConfiguration = $this->getTestStructure();
@@ -220,7 +220,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheTestMethodIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('testAlphanumNameNotAString');
+        $this->expectExceptionMessageIs('testAlphanumNameNotAString');
 
         $configuration = $this->getConfiguration();
         $testConfiguration = $this->getTestStructure();
@@ -242,7 +242,7 @@ final class ConfigurationParserTest extends TestCase
     public function testThrowsAnUnexpectedValueExceptionIfTheTestFileIsNotAString(): void
     {
         $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('testFileNotAString');
+        $this->expectExceptionMessageIs('testFileNotAString');
 
         $configuration = $this->getConfiguration();
         $testConfiguration = $this->getTestStructure();

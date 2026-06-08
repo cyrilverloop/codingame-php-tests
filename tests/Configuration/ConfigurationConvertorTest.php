@@ -42,7 +42,7 @@ final class ConfigurationConvertorTest extends TestCase
     public function testThrowsARuntimeExceptionIfTheDefaultCodeFileIsNotReadable(): void
     {
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('defaultCodeFileNotReadable');
+        $this->expectExceptionMessageIs('defaultCodeFileNotReadable');
 
         $parsedTestConfiguration = new TestConfiguration(
             'A test name',
