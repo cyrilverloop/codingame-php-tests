@@ -6,7 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- phpunit 13.1.13 => 13.2.0.
+- phpunit 13.1.13 => 13.2.2.
+- symfony/deprecation-contracts v3.7.0 => v3.7.1.
+- symfony/polyfill-mbstring v1.38.1 => v1.38.2.
+- symfony/translation-contracts v3.7.0 => v3.7.1.
 
 ## [6.18.0] - 2026-05-31
 ### Changed
