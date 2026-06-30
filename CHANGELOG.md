@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - symfony/deprecation-contracts v3.7.0 => v3.7.1.
 - symfony/polyfill-mbstring v1.38.1 => v1.38.2.
 - symfony/translation-contracts v3.7.0 => v3.7.1.
+- cyril-verloop/codingame-configuration 1.27.0 => 1.28.0.
 
 ## [6.18.0] - 2026-05-31
 ### Changed
