@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - symfony/polyfill-intl-normalizer v1.38.0 => v1.42.0.
 - symfony/string v8.1.0 => v8.1.2.
 - twig/twig v3.27.1 => v3.28.0.
+- infection 0.29.14 => 0.35.3.
 
 ## [6.19.0] - 2026-06-30
 ### Changed
