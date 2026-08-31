@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - phpcs 3.13.5 => 3.13.6.
 - phpcbf 3.13.5 => 3.13.6.
 - phpunit 13.2.2 => 13.3.2.
+- cyril-verloop/codingame-configuration 1.28.0 => 1.29.0.
+- symfony/polyfill-intl-grapheme v1.38.1 => v1.41.0.
+- symfony/polyfill-intl-normalizer v1.38.0 => v1.42.0.
+- symfony/string v8.1.0 => v8.1.2.
+- twig/twig v3.27.1 => v3.28.0.
 
 ## [6.19.0] - 2026-06-30
 ### Changed
