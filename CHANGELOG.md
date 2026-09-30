@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - symfony/polyfill-mbstring v1.38.2 => v1.43.0.
 - symfony/string v8.1.2 => v8.1.7.
 - twig/twig v3.28.0 => v3.30.0.
+- cyril-verloop/codingame-configuration 1.29.0 => 1.30.0.
 
 ## [6.20.0] - 2026-08-31
 ### Changed
