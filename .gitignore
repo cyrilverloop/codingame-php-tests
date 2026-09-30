@@ -6,10 +6,10 @@
 /src/Expert/**/*.*
 /src/Hard/**/*.*
 /src/Medium/**/*.*
-/tests/Easy/**/*.*
-/tests/Expert/**/*.*
-/tests/Hard/**/*.*
-/tests/Medium/**/*.*
+/tests/Easy/
+/tests/Expert/
+/tests/Hard/
+/tests/Medium/
 /tools/
 /var/cache/
 /vendor/

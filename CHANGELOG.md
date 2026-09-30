@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - twig/twig v3.28.0 => v3.30.0.
 - cyril-verloop/codingame-configuration 1.29.0 => 1.30.0.
 
+### Fixed
+- .gitignore for tests directories.
+
 ## [6.20.0] - 2026-08-31
 ### Changed
 - phpcs 3.13.5 => 3.13.6.
