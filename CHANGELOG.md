@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - phpunit 13.3.2 => 13.3.6.
 - psalm 6.16.1 => 6.19.1.
 - infection 0.35.3 => 0.35.5.
+- symfony/polyfill-intl-grapheme v1.41.0 => v1.43.0.
+- symfony/polyfill-intl-normalizer v1.42.0 => v1.43.0.
+- symfony/polyfill-mbstring v1.38.2 => v1.43.0.
+- symfony/string v8.1.2 => v8.1.7.
+- twig/twig v3.28.0 => v3.30.0.
 
 ## [6.20.0] - 2026-08-31
 ### Changed
