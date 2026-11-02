@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Changed
+- phpunit 13.3.6 => 13.4.6.
+- psalm 6.19.1 => 6.20.5.
+- infection 0.35.5 => 0.35.8.
+
 ## [6.21.0] - 2026-09-30
 ### Changed
 - phpunit 13.3.2 => 13.3.6.
